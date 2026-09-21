@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #f8fafc);
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    text-align: center;
+    color: #2563eb;
+    font-size: 36px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin: 8px 0 25px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid #dbeafe;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #2563eb;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#addBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#addBtn:hover {
+    background: #1d4ed8;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0 15px;
+}
+
+.filter {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.filter.active {
+    background: #2563eb;
+    color: white;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.task-text {
+    flex: 1;
+    color: #1e293b;
+    word-break: break-word;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.edit-btn {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #64748b;
+}
+
+#clearBtn {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 10px auto;
+        padding: 20px;
+    }
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    #addBtn {
+        width: 100%;
+    }
+
+    .task {
+        flex-wrap: wrap;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
